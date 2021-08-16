@@ -29,19 +29,31 @@ class GameViewController: UIViewController {
     }
     
     var questions = [
-        Question(question: "2 + 2", answers: ["1", "2", "3", "4"], correctAnswer: "4"),
-        Question(question: "3 + 3", answers: ["6", "21", "13", "4"], correctAnswer: "6"),
-        Question(question: "4 + 4", answers: ["11", "2", "8", "1"], correctAnswer: "8")
+        Question(
+            question: "2 + 2",
+            answers: Answers(firstAnswer: "1", secondAnswer: "2", thirdAnswer: "3", fourthAnswer: "4"),
+            correctAnswer: "4"
+        ),
+        Question(
+            question: "3 + 3",
+            answers: Answers(firstAnswer: "4", secondAnswer: "6", thirdAnswer: "7", fourthAnswer: "11"),
+            correctAnswer: "6"
+        ),
+        Question(
+            question: "4 + 4",
+            answers: Answers(firstAnswer: "11", secondAnswer: "2", thirdAnswer: "8", fourthAnswer: "1"),
+            correctAnswer: "8"
+        )
     ]
     var correctAnswer: String = ""
     var questionNumber: Int = 0
     
     func createQuestion(question: Question) {
         questionLabel.text = question.question
-        firstAnswerOutlet.setTitle(question.answers[0] ,for: .normal)
-        secondAnswerOutlet.setTitle(question.answers[1] ,for: .normal)
-        thirdAnswerOutlet.setTitle(question.answers[2] ,for: .normal)
-        fourthAnswerOutlet.setTitle(question.answers[3] ,for: .normal)
+        firstAnswerOutlet.setTitle(question.answers.firstAnswer ,for: .normal)
+        secondAnswerOutlet.setTitle(question.answers.secondAnswer ,for: .normal)
+        thirdAnswerOutlet.setTitle(question.answers.thirdAnswer ,for: .normal)
+        fourthAnswerOutlet.setTitle(question.answers.fourthAnswer ,for: .normal)
         correctAnswer = question.correctAnswer
         questionNumber += 1
     }
