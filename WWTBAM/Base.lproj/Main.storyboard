@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WWTBAM" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="WWTBAM" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -51,17 +51,79 @@
             </objects>
             <point key="canvasLocation" x="139" y="70"/>
         </scene>
-        <!--View Controller-->
+        <!--Game View Controller-->
         <scene sceneID="bhY-V9-2a5">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="hcW-ON-jSS" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="hcW-ON-jSS" customClass="GameViewController" customModule="WWTBAM" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jce-rP-GBP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xGJ-RQ-6dM">
+                                <rect key="frame" x="183" y="194" width="48" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="6p5-yX-mTb">
+                                <rect key="frame" x="177.5" y="558" width="59" height="204"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iE8-aV-1Sh">
+                                        <rect key="frame" x="0.0" y="0.0" width="59" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="firstAnswerAction:" destination="hcW-ON-jSS" eventType="touchUpInside" id="aPR-f7-Sz9"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jrM-HS-4NJ">
+                                        <rect key="frame" x="0.0" y="56" width="59" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="secondAnswerAction:" destination="hcW-ON-jSS" eventType="touchUpInside" id="3gU-OB-bxf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9R7-ca-dBb">
+                                        <rect key="frame" x="0.0" y="112" width="59" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="thirdAnswerAction:" destination="hcW-ON-jSS" eventType="touchUpInside" id="9fO-dd-ycc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6h4-9Y-e2X">
+                                        <rect key="frame" x="0.0" y="168" width="59" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="fourthAnswerAction:" destination="hcW-ON-jSS" eventType="touchUpInside" id="uTk-pl-6HY"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="LLd-79-Ckp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xGJ-RQ-6dM" firstAttribute="top" secondItem="LLd-79-Ckp" secondAttribute="top" constant="150" id="Gda-zI-kSE"/>
+                            <constraint firstItem="LLd-79-Ckp" firstAttribute="bottom" secondItem="6p5-yX-mTb" secondAttribute="bottom" constant="100" id="NGK-SW-igl"/>
+                            <constraint firstItem="xGJ-RQ-6dM" firstAttribute="centerX" secondItem="Jce-rP-GBP" secondAttribute="centerX" id="Qrv-iA-m7Q"/>
+                            <constraint firstItem="6p5-yX-mTb" firstAttribute="centerX" secondItem="Jce-rP-GBP" secondAttribute="centerX" id="kv1-a1-2Ln"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="1Hu-iF-TJ0"/>
+                    <connections>
+                        <outlet property="questionLabel" destination="xGJ-RQ-6dM" id="D60-W3-dQb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sd9-7m-4sw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
