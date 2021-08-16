@@ -43,6 +43,21 @@ class GameViewController: UIViewController {
             question: "4 + 4",
             answers: Answers(firstAnswer: "11", secondAnswer: "2", thirdAnswer: "8", fourthAnswer: "1"),
             correctAnswer: "8"
+        ),
+        Question(
+            question: "12 + 4",
+            answers: Answers(firstAnswer: "6", secondAnswer: "16", thirdAnswer: "23", fourthAnswer: "98"),
+            correctAnswer: "16"
+        ),
+        Question(
+            question: "15 + 15",
+            answers: Answers(firstAnswer: "30", secondAnswer: "75", thirdAnswer: "1387", fourthAnswer: "1231"),
+            correctAnswer: "30"
+        ),
+        Question(
+            question: "43 + 19",
+            answers: Answers(firstAnswer: "19", secondAnswer: "13", thirdAnswer: "62", fourthAnswer: "0"),
+            correctAnswer: "62"
         )
     ]
     var correctAnswer: String = ""
@@ -61,6 +76,8 @@ class GameViewController: UIViewController {
     func isCorrectAnswer(correctAnswer: String, answerLabel: String) {
         if (correctAnswer == answerLabel) && (questionNumber < questions.count) {
             createQuestion(question: questions[questionNumber])
+        } else {
+            dismiss(animated: true, completion: nil)
         }
     }
     
