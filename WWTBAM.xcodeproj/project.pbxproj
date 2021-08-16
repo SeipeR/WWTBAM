@@ -59,12 +59,12 @@
 			isa = PBXGroup;
 			children = (
 				57B7E93726CA6C88003AE9CB /* AppDelegate.swift */,
+				57B7E94326CA6C89003AE9CB /* Assets.xcassets */,
+				57B7E94826CA6C89003AE9CB /* Info.plist */,
+				57B7E94526CA6C89003AE9CB /* LaunchScreen.storyboard */,
+				57B7E93D26CA6C88003AE9CB /* Main.storyboard */,
 				57B7E93926CA6C88003AE9CB /* SceneDelegate.swift */,
 				57B7E93B26CA6C88003AE9CB /* ViewController.swift */,
-				57B7E93D26CA6C88003AE9CB /* Main.storyboard */,
-				57B7E94326CA6C89003AE9CB /* Assets.xcassets */,
-				57B7E94526CA6C89003AE9CB /* LaunchScreen.storyboard */,
-				57B7E94826CA6C89003AE9CB /* Info.plist */,
 				57B7E94026CA6C88003AE9CB /* WWTBAM.xcdatamodeld */,
 			);
 			path = WWTBAM;
