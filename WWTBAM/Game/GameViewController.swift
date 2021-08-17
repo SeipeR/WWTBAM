@@ -62,6 +62,7 @@ class GameViewController: UIViewController {
     ]
     var correctAnswer: String = ""
     var questionNumber: Int = 0
+    var gameSession = GameSession()
     
     func createQuestion(question: Question) {
         questionLabel.text = question.question
