@@ -85,9 +85,10 @@ class GameViewController: UIViewController {
         if (correctAnswer == answerLabel) && (questionNumber < questions.count) {
             createQuestion(question: questions[questionNumber])
         } else {
-            gameSession.correctAnswersCount = questionNumber - 1
+            gameSession.correctAnswersCount = (correctAnswer == answerLabel) ? questionNumber : (questionNumber - 1)
             gameSession.questionsCount = questions.count
             gameViewControllerDelegate?.didEndGame(currentSession: gameSession)
+            GameSingleton.instance.addResult(result: gameSession)
             dismiss(animated: true, completion: nil)
         }
     }

@@ -11,6 +11,10 @@
 		571FD56426CA933500FA7023 /* Answers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571FD56326CA933500FA7023 /* Answers.swift */; };
 		571FD56C26CBA16C00FA7023 /* GameSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571FD56B26CBA16C00FA7023 /* GameSingleton.swift */; };
 		571FD56E26CBA17D00FA7023 /* GameSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571FD56D26CBA17D00FA7023 /* GameSession.swift */; };
+		5722AE2626CD29C200BF6201 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5722AE2526CD29C200BF6201 /* ResultViewController.swift */; };
+		5722AE2A26CD2AD300BF6201 /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5722AE2826CD2AD300BF6201 /* ResultTableViewCell.swift */; };
+		5722AE2B26CD2AD300BF6201 /* ResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5722AE2926CD2AD300BF6201 /* ResultTableViewCell.xib */; };
+		5722AE2E26CD385900BF6201 /* ResultsCaretaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5722AE2D26CD385900BF6201 /* ResultsCaretaker.swift */; };
 		57B7E93826CA6C88003AE9CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B7E93726CA6C88003AE9CB /* AppDelegate.swift */; };
 		57B7E93A26CA6C88003AE9CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B7E93926CA6C88003AE9CB /* SceneDelegate.swift */; };
 		57B7E93C26CA6C88003AE9CB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B7E93B26CA6C88003AE9CB /* MainViewController.swift */; };
@@ -26,6 +30,10 @@
 		571FD56326CA933500FA7023 /* Answers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answers.swift; sourceTree = "<group>"; };
 		571FD56B26CBA16C00FA7023 /* GameSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSingleton.swift; sourceTree = "<group>"; };
 		571FD56D26CBA17D00FA7023 /* GameSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSession.swift; sourceTree = "<group>"; };
+		5722AE2526CD29C200BF6201 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		5722AE2826CD2AD300BF6201 /* ResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
+		5722AE2926CD2AD300BF6201 /* ResultTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultTableViewCell.xib; sourceTree = "<group>"; };
+		5722AE2D26CD385900BF6201 /* ResultsCaretaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsCaretaker.swift; sourceTree = "<group>"; };
 		57B7E93426CA6C88003AE9CB /* WWTBAM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WWTBAM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57B7E93726CA6C88003AE9CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57B7E93926CA6C88003AE9CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +65,23 @@
 			path = Singleton;
 			sourceTree = "<group>";
 		};
+		5722AE2726CD2AAB00BF6201 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				5722AE2826CD2AD300BF6201 /* ResultTableViewCell.swift */,
+				5722AE2926CD2AD300BF6201 /* ResultTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		5722AE2C26CD384000BF6201 /* Memento */ = {
+			isa = PBXGroup;
+			children = (
+				5722AE2D26CD385900BF6201 /* ResultsCaretaker.swift */,
+			);
+			path = Memento;
+			sourceTree = "<group>";
+		};
 		57B7E92B26CA6C88003AE9CB = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +101,7 @@
 		57B7E93626CA6C88003AE9CB /* WWTBAM */ = {
 			isa = PBXGroup;
 			children = (
+				5722AE2C26CD384000BF6201 /* Memento */,
 				571FD56A26CBA12B00FA7023 /* Singleton */,
 				57B7E95026CA7E15003AE9CB /* Objects */,
 				57B7E94F26CA7D76003AE9CB /* Game */,
@@ -101,9 +127,10 @@
 		57B7E94F26CA7D76003AE9CB /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				5722AE2726CD2AAB00BF6201 /* Cell */,
 				57B7E93B26CA6C88003AE9CB /* MainViewController.swift */,
 				571FD56126CA82F900FA7023 /* GameViewController.swift */,
-				571FD56D26CBA17D00FA7023 /* GameSession.swift */,
+				5722AE2526CD29C200BF6201 /* ResultViewController.swift */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -113,6 +140,7 @@
 			children = (
 				57B7E95126CA7E30003AE9CB /* Question.swift */,
 				571FD56326CA933500FA7023 /* Answers.swift */,
+				571FD56D26CBA17D00FA7023 /* GameSession.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -176,6 +204,7 @@
 			files = (
 				57B7E94726CA6C89003AE9CB /* LaunchScreen.storyboard in Resources */,
 				57B7E94426CA6C89003AE9CB /* Assets.xcassets in Resources */,
+				5722AE2B26CD2AD300BF6201 /* ResultTableViewCell.xib in Resources */,
 				57B7E93F26CA6C88003AE9CB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -187,13 +216,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5722AE2A26CD2AD300BF6201 /* ResultTableViewCell.swift in Sources */,
 				57B7E95226CA7E30003AE9CB /* Question.swift in Sources */,
 				57B7E93C26CA6C88003AE9CB /* MainViewController.swift in Sources */,
 				57B7E94226CA6C88003AE9CB /* WWTBAM.xcdatamodeld in Sources */,
 				571FD56426CA933500FA7023 /* Answers.swift in Sources */,
 				57B7E93826CA6C88003AE9CB /* AppDelegate.swift in Sources */,
+				5722AE2626CD29C200BF6201 /* ResultViewController.swift in Sources */,
 				571FD56226CA82F900FA7023 /* GameViewController.swift in Sources */,
 				57B7E93A26CA6C88003AE9CB /* SceneDelegate.swift in Sources */,
+				5722AE2E26CD385900BF6201 /* ResultsCaretaker.swift in Sources */,
 				571FD56E26CBA17D00FA7023 /* GameSession.swift in Sources */,
 				571FD56C26CBA16C00FA7023 /* GameSingleton.swift in Sources */,
 			);

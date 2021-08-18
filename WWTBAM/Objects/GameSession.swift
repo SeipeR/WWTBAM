@@ -8,10 +8,12 @@
 import Foundation
 
 
-class GameSession {
+class GameSession: Codable {
     
     var correctAnswersCount: Int = 0
     var questionsCount: Int = 0
+    var date: Date = Date()
+    var percentage = 0
     
 }
 
