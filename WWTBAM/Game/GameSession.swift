@@ -14,3 +14,11 @@ class GameSession {
     var questionsCount: Int = 0
     
 }
+
+extension GameSession: GameViewControllerDelegate {
+    
+    func didEndGame(currentSession: GameSession) {
+        GameSingleton.instance.session = currentSession
+    }
+    
+}
