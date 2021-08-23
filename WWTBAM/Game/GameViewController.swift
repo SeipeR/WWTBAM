@@ -13,6 +13,7 @@ protocol GameViewControllerDelegate: GameSession {
 
 class GameViewController: UIViewController {
     
+    @IBOutlet weak var currentGameResultLabel: UILabel!
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var firstAnswerOutlet: UIButton!
     @IBOutlet weak var secondAnswerOutlet: UIButton!
@@ -67,7 +68,12 @@ class GameViewController: UIViewController {
         )
     ]
     var correctAnswer: String = ""
-    var questionNumber: Int = 0
+    var questionNumber: Int = 0 {
+        didSet {
+            let percentage = Int(round((Double(questionNumber - 1) / Double(questions.count)) * 100))
+            currentGameResultLabel.text = "Question \(questionNumber)\nAnswered \(percentage)% of the questions"
+        }
+    }
     
     var directQuestionStrategy: QuestionStrategy = DirectQuestionOrderStrategy()
     var randomQuestionStrategy: QuestionStrategy = RandomQuestionOrderStrategy()
