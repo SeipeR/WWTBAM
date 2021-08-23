@@ -69,6 +69,8 @@ class GameViewController: UIViewController {
     var correctAnswer: String = ""
     var questionNumber: Int = 0
     
+    var questionStrategy: QuestionStrategy = RandomQuestionOrderStrategy()
+    
     var gameSession = GameSession()
     
     func createQuestion(question: Question) {
@@ -97,6 +99,8 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
         
         gameViewControllerDelegate = gameSession
+        
+        questions = questionStrategy.setQuestionOrder(questions: questions)
         
         createQuestion(question: questions[questionNumber])
     }
