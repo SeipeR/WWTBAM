@@ -24,6 +24,7 @@ class GameSingleton {
             caretaker.saveResults(results: results)
         }
     }
+    var isDirectQuestionsOrder = true
     
     private init() {
         results = caretaker.loadResults() ?? []

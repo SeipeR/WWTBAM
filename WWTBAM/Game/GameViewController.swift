@@ -69,7 +69,8 @@ class GameViewController: UIViewController {
     var correctAnswer: String = ""
     var questionNumber: Int = 0
     
-    var questionStrategy: QuestionStrategy = RandomQuestionOrderStrategy()
+    var directQuestionStrategy: QuestionStrategy = DirectQuestionOrderStrategy()
+    var randomQuestionStrategy: QuestionStrategy = RandomQuestionOrderStrategy()
     
     var gameSession = GameSession()
     
@@ -100,7 +101,11 @@ class GameViewController: UIViewController {
         
         gameViewControllerDelegate = gameSession
         
-        questions = questionStrategy.setQuestionOrder(questions: questions)
+        if GameSingleton.instance.isDirectQuestionsOrder == true {
+            questions = directQuestionStrategy.setQuestionOrder(questions: questions)
+        } else {
+            questions = randomQuestionStrategy.setQuestionOrder(questions: questions)
+        }
         
         createQuestion(question: questions[questionNumber])
     }

@@ -11,13 +11,13 @@
         <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="WWTBAM" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="MainViewController" customModule="WWTBAM" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xWs-3U-Jdp">
-                                <rect key="frame" x="160" y="407" width="94" height="82"/>
+                                <rect key="frame" x="160" y="384" width="94" height="128"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f8W-cT-lAd">
                                         <rect key="frame" x="0.0" y="0.0" width="94" height="36"/>
@@ -39,6 +39,16 @@
                                             <segue destination="9cf-cb-UV2" kind="show" id="iQw-Ap-itU"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zUS-kS-0dg">
+                                        <rect key="frame" x="0.0" y="92" width="94" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Settings">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="yyV-qY-gNg" kind="show" id="N6V-vv-71P"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -49,6 +59,7 @@
                             <constraint firstItem="xWs-3U-Jdp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="a2T-Na-1Kv"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="M4p-E9-MpN"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -134,7 +145,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sd9-7m-4sw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1026" y="-255"/>
+            <point key="canvasLocation" x="1303" y="-688"/>
         </scene>
         <!--Result View Controller-->
         <scene sceneID="Aox-8F-hoT">
@@ -153,7 +164,62 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S3w-Ng-izI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1023" y="395"/>
+            <point key="canvasLocation" x="1303" y="70"/>
+        </scene>
+        <!--Game Settings View Controller-->
+        <scene sceneID="IBq-fm-4Ae">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="yyV-qY-gNg" customClass="GameSettingsViewController" customModule="WWTBAM" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SaB-w4-rFF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Hfo-7P-eQF">
+                                <rect key="frame" x="20" y="394.5" width="374" height="107"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Questions order" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mfm-OG-SgM">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="gkH-Oi-MdN">
+                                        <rect key="frame" x="0.0" y="32" width="374" height="32"/>
+                                        <segments>
+                                            <segment title="Direct"/>
+                                            <segment title="Random"/>
+                                        </segments>
+                                    </segmentedControl>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Prz-Dp-UI8">
+                                        <rect key="frame" x="0.0" y="71" width="374" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Save">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="saveSettingsButton:" destination="yyV-qY-gNg" eventType="touchUpInside" id="fny-Rp-yf9"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="FEz-C0-EbA"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ZqI-06-y41"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Hfo-7P-eQF" firstAttribute="leading" secondItem="ZqI-06-y41" secondAttribute="leading" constant="20" id="JY8-t1-WDl"/>
+                            <constraint firstItem="Hfo-7P-eQF" firstAttribute="centerY" secondItem="SaB-w4-rFF" secondAttribute="centerY" id="Kvi-2u-2H5"/>
+                            <constraint firstItem="ZqI-06-y41" firstAttribute="trailing" secondItem="Hfo-7P-eQF" secondAttribute="trailing" constant="20" id="hCl-wn-UJ5"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="7Hi-ES-20L"/>
+                    <connections>
+                        <outlet property="questionsOrderSC" destination="gkH-Oi-MdN" id="eXY-GP-57Q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YHK-Xa-35z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1303" y="801"/>
         </scene>
     </scenes>
     <resources>
