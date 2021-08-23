@@ -107,6 +107,11 @@ class GameViewController: UIViewController {
         
         gameViewControllerDelegate = gameSession
         
+//        if GameSingleton.instance.userQuestions.count > 0 {
+//        questions.append(GameSingleton.instance.userQuestions)
+//        }
+        questions += GameSingleton.instance.userQuestions
+        
         if GameSingleton.instance.isDirectQuestionsOrder == true {
             questions = directQuestionStrategy.setQuestionOrder(questions: questions)
         } else {

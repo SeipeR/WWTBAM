@@ -249,61 +249,91 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the question" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dC4-OD-8tP">
-                                <rect key="frame" x="20" y="194" width="374" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="t5D-7P-P2c">
-                                <rect key="frame" x="20" y="402" width="374" height="160"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jJL-jt-81f">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First answer" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BBJ-l6-mr0">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the question" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dC4-OD-8tP">
+                                        <rect key="frame" x="20" y="150" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Second answer" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XKQ-gd-umS">
-                                        <rect key="frame" x="0.0" y="42" width="374" height="34"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="t5D-7P-P2c">
+                                        <rect key="frame" x="20" y="334" width="374" height="202"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First answer" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BBJ-l6-mr0">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Second answer" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XKQ-gd-umS">
+                                                <rect key="frame" x="0.0" y="42" width="374" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Third answer" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WFM-aC-gso">
+                                                <rect key="frame" x="0.0" y="84" width="374" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Fourth answer" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nMR-C2-u6y">
+                                                <rect key="frame" x="0.0" y="126" width="374" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CorrectAnswer" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tos-yP-GN6">
+                                                <rect key="frame" x="0.0" y="168" width="374" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0AJ-oZ-RU0">
+                                        <rect key="frame" x="141" y="636" width="132" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Third answer" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WFM-aC-gso">
-                                        <rect key="frame" x="0.0" y="84" width="374" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Fourth answer" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nMR-C2-u6y">
-                                        <rect key="frame" x="0.0" y="126" width="374" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
+                                        <state key="normal" title="Add a question">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="addQuestionAction:" destination="UkP-Lt-Hnd" eventType="touchUpInside" id="Kkf-7Z-wK9"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="jYw-0P-Dx9"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
-                            </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0AJ-oZ-RU0">
-                                <rect key="frame" x="141" y="776" width="132" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Add a question">
-                                    <color key="titleColor" systemColor="labelColor"/>
-                                </state>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="jYw-0P-Dx9"/>
-                                </connections>
-                            </button>
+                                <constraints>
+                                    <constraint firstItem="hQ6-Kx-vLA" firstAttribute="trailing" secondItem="t5D-7P-P2c" secondAttribute="trailing" constant="20" id="32J-QR-CT6"/>
+                                    <constraint firstItem="t5D-7P-P2c" firstAttribute="leading" secondItem="hQ6-Kx-vLA" secondAttribute="leading" constant="20" id="96i-b1-ubq"/>
+                                    <constraint firstAttribute="trailing" secondItem="t5D-7P-P2c" secondAttribute="trailing" constant="20" id="G1v-Wz-CTi"/>
+                                    <constraint firstItem="0AJ-oZ-RU0" firstAttribute="centerX" secondItem="jJL-jt-81f" secondAttribute="centerX" id="UNp-zB-tJo"/>
+                                    <constraint firstAttribute="bottom" secondItem="0AJ-oZ-RU0" secondAttribute="bottom" constant="430" id="WAi-cy-RSg"/>
+                                    <constraint firstItem="hQ6-Kx-vLA" firstAttribute="trailing" secondItem="dC4-OD-8tP" secondAttribute="trailing" constant="20" id="kQy-Th-Edm"/>
+                                    <constraint firstItem="dC4-OD-8tP" firstAttribute="leading" secondItem="hQ6-Kx-vLA" secondAttribute="leading" constant="20" id="n4o-sQ-jUS"/>
+                                    <constraint firstItem="dC4-OD-8tP" firstAttribute="top" secondItem="jJL-jt-81f" secondAttribute="top" constant="150" id="oOf-QG-H2G"/>
+                                    <constraint firstItem="t5D-7P-P2c" firstAttribute="top" secondItem="dC4-OD-8tP" secondAttribute="bottom" constant="150" id="sH0-QG-BHi"/>
+                                    <constraint firstItem="0AJ-oZ-RU0" firstAttribute="top" secondItem="t5D-7P-P2c" secondAttribute="bottom" constant="100" id="z3E-Z3-5Ko"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="eTK-lo-ss0"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="hQ6-Kx-vLA"/>
+                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3jj-Em-YNx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="3jj-Em-YNx" firstAttribute="bottom" secondItem="0AJ-oZ-RU0" secondAttribute="bottom" constant="50" id="6L6-bF-L9L"/>
-                            <constraint firstItem="t5D-7P-P2c" firstAttribute="leading" secondItem="3jj-Em-YNx" secondAttribute="leading" constant="20" id="A00-z7-8ps"/>
-                            <constraint firstItem="3jj-Em-YNx" firstAttribute="trailing" secondItem="dC4-OD-8tP" secondAttribute="trailing" constant="20" id="It7-np-Lfe"/>
-                            <constraint firstItem="3jj-Em-YNx" firstAttribute="bottom" secondItem="t5D-7P-P2c" secondAttribute="bottom" constant="300" id="N4Z-mG-M3M"/>
-                            <constraint firstItem="dC4-OD-8tP" firstAttribute="top" secondItem="3jj-Em-YNx" secondAttribute="top" constant="150" id="QMo-OH-XpM"/>
-                            <constraint firstItem="0AJ-oZ-RU0" firstAttribute="centerX" secondItem="Bj2-E4-z8C" secondAttribute="centerX" id="a10-3N-w6W"/>
-                            <constraint firstItem="3jj-Em-YNx" firstAttribute="trailing" secondItem="t5D-7P-P2c" secondAttribute="trailing" constant="20" id="lXy-aq-ujG"/>
-                            <constraint firstItem="dC4-OD-8tP" firstAttribute="leading" secondItem="3jj-Em-YNx" secondAttribute="leading" constant="20" id="wdf-13-g0g"/>
+                            <constraint firstItem="3jj-Em-YNx" firstAttribute="bottom" secondItem="jJL-jt-81f" secondAttribute="bottom" id="9C4-dF-VM2"/>
+                            <constraint firstItem="3jj-Em-YNx" firstAttribute="trailing" secondItem="jJL-jt-81f" secondAttribute="trailing" id="HEI-2Q-gId"/>
+                            <constraint firstItem="jJL-jt-81f" firstAttribute="leading" secondItem="3jj-Em-YNx" secondAttribute="leading" id="foq-PG-1cL"/>
+                            <constraint firstItem="jJL-jt-81f" firstAttribute="top" secondItem="3jj-Em-YNx" secondAttribute="top" id="za1-hg-Fdf"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="PbR-QS-xkc"/>
+                    <connections>
+                        <outlet property="correctAnswerTF" destination="tos-yP-GN6" id="nNE-9o-e6g"/>
+                        <outlet property="firstAnswerTF" destination="BBJ-l6-mr0" id="vCr-Kf-FyM"/>
+                        <outlet property="fourthAnswerTF" destination="nMR-C2-u6y" id="vqi-KJ-ZjL"/>
+                        <outlet property="questionTF" destination="dC4-OD-8tP" id="EDk-CB-U41"/>
+                        <outlet property="scrollView" destination="jJL-jt-81f" id="3v4-3I-fAl"/>
+                        <outlet property="secondAnswerTF" destination="XKQ-gd-umS" id="i9t-uu-nkP"/>
+                        <outlet property="thirdAnswerTF" destination="WFM-aC-gso" id="3ri-Xn-CMM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Sy-je-k39" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

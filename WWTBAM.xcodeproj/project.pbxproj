@@ -17,6 +17,7 @@
 		5722AE2E26CD385900BF6201 /* ResultsCaretaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5722AE2D26CD385900BF6201 /* ResultsCaretaker.swift */; };
 		57B31F1126D3D64A0048B164 /* GameSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B31F1026D3D64A0048B164 /* GameSettingsViewController.swift */; };
 		57B31F1426D3F6080048B164 /* NewQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B31F1326D3F6080048B164 /* NewQuestionViewController.swift */; };
+		57B31F1626D3FFC50048B164 /* UserQuestionsCaretaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B31F1526D3FFC50048B164 /* UserQuestionsCaretaker.swift */; };
 		57B7E93826CA6C88003AE9CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B7E93726CA6C88003AE9CB /* AppDelegate.swift */; };
 		57B7E93A26CA6C88003AE9CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B7E93926CA6C88003AE9CB /* SceneDelegate.swift */; };
 		57B7E93C26CA6C88003AE9CB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B7E93B26CA6C88003AE9CB /* MainViewController.swift */; };
@@ -41,6 +42,7 @@
 		5722AE2D26CD385900BF6201 /* ResultsCaretaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsCaretaker.swift; sourceTree = "<group>"; };
 		57B31F1026D3D64A0048B164 /* GameSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSettingsViewController.swift; sourceTree = "<group>"; };
 		57B31F1326D3F6080048B164 /* NewQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewQuestionViewController.swift; sourceTree = "<group>"; };
+		57B31F1526D3FFC50048B164 /* UserQuestionsCaretaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserQuestionsCaretaker.swift; sourceTree = "<group>"; };
 		57B7E93426CA6C88003AE9CB /* WWTBAM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WWTBAM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57B7E93726CA6C88003AE9CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57B7E93926CA6C88003AE9CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				5722AE2D26CD385900BF6201 /* ResultsCaretaker.swift */,
+				57B31F1526D3FFC50048B164 /* UserQuestionsCaretaker.swift */,
 			);
 			path = Memento;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 				57B7E94226CA6C88003AE9CB /* WWTBAM.xcdatamodeld in Sources */,
 				571FD56426CA933500FA7023 /* Answers.swift in Sources */,
 				57B7E93826CA6C88003AE9CB /* AppDelegate.swift in Sources */,
+				57B31F1626D3FFC50048B164 /* UserQuestionsCaretaker.swift in Sources */,
 				5722AE2626CD29C200BF6201 /* ResultViewController.swift in Sources */,
 				57D24B7C26D3B1CF0074ACC7 /* RandomQuestionOrderStrategy.swift in Sources */,
 				57B31F1126D3D64A0048B164 /* GameSettingsViewController.swift in Sources */,
