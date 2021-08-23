@@ -17,10 +17,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xWs-3U-Jdp">
-                                <rect key="frame" x="160" y="384" width="94" height="128"/>
+                                <rect key="frame" x="141" y="361" width="132" height="174"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f8W-cT-lAd">
-                                        <rect key="frame" x="0.0" y="0.0" width="94" height="36"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="132" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="New game">
                                             <color key="titleColor" systemColor="labelColor"/>
@@ -30,7 +30,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pSz-YP-r66">
-                                        <rect key="frame" x="0.0" y="46" width="94" height="36"/>
+                                        <rect key="frame" x="0.0" y="46" width="132" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Results">
                                             <color key="titleColor" systemColor="labelColor"/>
@@ -40,13 +40,23 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zUS-kS-0dg">
-                                        <rect key="frame" x="0.0" y="92" width="94" height="36"/>
+                                        <rect key="frame" x="0.0" y="92" width="132" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Settings">
                                             <color key="titleColor" systemColor="labelColor"/>
                                         </state>
                                         <connections>
                                             <segue destination="yyV-qY-gNg" kind="show" id="N6V-vv-71P"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wcg-Mz-Eqx">
+                                        <rect key="frame" x="0.0" y="138" width="132" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Add a question">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="UkP-Lt-Hnd" kind="show" id="X8U-cf-xdE"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -229,9 +239,80 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YHK-Xa-35z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1303" y="801"/>
+            <point key="canvasLocation" x="138" y="751"/>
+        </scene>
+        <!--New Question View Controller-->
+        <scene sceneID="Oc9-R6-Hpo">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="UkP-Lt-Hnd" customClass="NewQuestionViewController" customModule="WWTBAM" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Bj2-E4-z8C">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the question" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dC4-OD-8tP">
+                                <rect key="frame" x="20" y="194" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="t5D-7P-P2c">
+                                <rect key="frame" x="20" y="402" width="374" height="160"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First answer" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BBJ-l6-mr0">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Second answer" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XKQ-gd-umS">
+                                        <rect key="frame" x="0.0" y="42" width="374" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Third answer" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WFM-aC-gso">
+                                        <rect key="frame" x="0.0" y="84" width="374" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Fourth answer" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nMR-C2-u6y">
+                                        <rect key="frame" x="0.0" y="126" width="374" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0AJ-oZ-RU0">
+                                <rect key="frame" x="141" y="776" width="132" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Add a question">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="jYw-0P-Dx9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3jj-Em-YNx"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3jj-Em-YNx" firstAttribute="bottom" secondItem="0AJ-oZ-RU0" secondAttribute="bottom" constant="50" id="6L6-bF-L9L"/>
+                            <constraint firstItem="t5D-7P-P2c" firstAttribute="leading" secondItem="3jj-Em-YNx" secondAttribute="leading" constant="20" id="A00-z7-8ps"/>
+                            <constraint firstItem="3jj-Em-YNx" firstAttribute="trailing" secondItem="dC4-OD-8tP" secondAttribute="trailing" constant="20" id="It7-np-Lfe"/>
+                            <constraint firstItem="3jj-Em-YNx" firstAttribute="bottom" secondItem="t5D-7P-P2c" secondAttribute="bottom" constant="300" id="N4Z-mG-M3M"/>
+                            <constraint firstItem="dC4-OD-8tP" firstAttribute="top" secondItem="3jj-Em-YNx" secondAttribute="top" constant="150" id="QMo-OH-XpM"/>
+                            <constraint firstItem="0AJ-oZ-RU0" firstAttribute="centerX" secondItem="Bj2-E4-z8C" secondAttribute="centerX" id="a10-3N-w6W"/>
+                            <constraint firstItem="3jj-Em-YNx" firstAttribute="trailing" secondItem="t5D-7P-P2c" secondAttribute="trailing" constant="20" id="lXy-aq-ujG"/>
+                            <constraint firstItem="dC4-OD-8tP" firstAttribute="leading" secondItem="3jj-Em-YNx" secondAttribute="leading" constant="20" id="wdf-13-g0g"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="PbR-QS-xkc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Sy-je-k39" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1303" y="751"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="jYw-0P-Dx9"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

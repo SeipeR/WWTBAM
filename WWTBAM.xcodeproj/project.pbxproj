@@ -16,6 +16,7 @@
 		5722AE2B26CD2AD300BF6201 /* ResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5722AE2926CD2AD300BF6201 /* ResultTableViewCell.xib */; };
 		5722AE2E26CD385900BF6201 /* ResultsCaretaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5722AE2D26CD385900BF6201 /* ResultsCaretaker.swift */; };
 		57B31F1126D3D64A0048B164 /* GameSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B31F1026D3D64A0048B164 /* GameSettingsViewController.swift */; };
+		57B31F1426D3F6080048B164 /* NewQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B31F1326D3F6080048B164 /* NewQuestionViewController.swift */; };
 		57B7E93826CA6C88003AE9CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B7E93726CA6C88003AE9CB /* AppDelegate.swift */; };
 		57B7E93A26CA6C88003AE9CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B7E93926CA6C88003AE9CB /* SceneDelegate.swift */; };
 		57B7E93C26CA6C88003AE9CB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B7E93B26CA6C88003AE9CB /* MainViewController.swift */; };
@@ -39,6 +40,7 @@
 		5722AE2926CD2AD300BF6201 /* ResultTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultTableViewCell.xib; sourceTree = "<group>"; };
 		5722AE2D26CD385900BF6201 /* ResultsCaretaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsCaretaker.swift; sourceTree = "<group>"; };
 		57B31F1026D3D64A0048B164 /* GameSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSettingsViewController.swift; sourceTree = "<group>"; };
+		57B31F1326D3F6080048B164 /* NewQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewQuestionViewController.swift; sourceTree = "<group>"; };
 		57B7E93426CA6C88003AE9CB /* WWTBAM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WWTBAM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57B7E93726CA6C88003AE9CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57B7E93926CA6C88003AE9CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +92,13 @@
 			path = Memento;
 			sourceTree = "<group>";
 		};
+		57B31F1226D3EFCC0048B164 /* Observer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Observer;
+			sourceTree = "<group>";
+		};
 		57B7E92B26CA6C88003AE9CB = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +118,7 @@
 		57B7E93626CA6C88003AE9CB /* WWTBAM */ = {
 			isa = PBXGroup;
 			children = (
+				57B31F1226D3EFCC0048B164 /* Observer */,
 				57D24B7626D3B0790074ACC7 /* Strategy */,
 				5722AE2C26CD384000BF6201 /* Memento */,
 				571FD56A26CBA12B00FA7023 /* Singleton */,
@@ -141,6 +151,7 @@
 				571FD56126CA82F900FA7023 /* GameViewController.swift */,
 				5722AE2526CD29C200BF6201 /* ResultViewController.swift */,
 				57B31F1026D3D64A0048B164 /* GameSettingsViewController.swift */,
+				57B31F1326D3F6080048B164 /* NewQuestionViewController.swift */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -237,6 +248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				57D24B7826D3B0B00074ACC7 /* QuestionStrategy.swift in Sources */,
+				57B31F1426D3F6080048B164 /* NewQuestionViewController.swift in Sources */,
 				5722AE2A26CD2AD300BF6201 /* ResultTableViewCell.swift in Sources */,
 				57D24B7A26D3B15C0074ACC7 /* DirectQuestionOrderStrategy.swift in Sources */,
 				57B7E95226CA7E30003AE9CB /* Question.swift in Sources */,
