@@ -1,34 +1,34 @@
 //
-//  ResultsCaretaker.swift
+//  UserQuestionsCaretaker.swift
 //  WWTBAM
 //
-//  Created by Дамир Доронкин on 18.08.2021.
+//  Created by Дамир Доронкин on 23.08.2021.
 //
 
 import Foundation
 
-class ResultsCaretaker {
+class UserQuestionsCaretaker {
     
     private let encoder = JSONEncoder()
     private let decoder = JSONDecoder()
-    private let key = "resultKey"
+    private let key = "questionKey"
     
-    func saveResults(results: [GameSession]) {
+    func saveQuestions(questions: [Question]) {
         do {
-            let data = try encoder.encode(results)
+            let data = try encoder.encode(questions)
             UserDefaults.standard.setValue(data, forKey: key)
         } catch {
             print(error.localizedDescription)
         }
     }
     
-    func loadResults() -> [GameSession]? {
+    func loadQuestions() -> [Question]? {
         guard let data = UserDefaults.standard.data(forKey: key) else {
             return nil
         }
         
         do {
-            return try decoder.decode([GameSession].self, from: data)
+            return try decoder.decode([Question].self, from: data)
         } catch {
             print(error.localizedDescription)
             return nil

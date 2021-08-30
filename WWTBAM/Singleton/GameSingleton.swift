@@ -9,7 +9,8 @@ import Foundation
 
 class GameSingleton {
     
-    private let caretaker = ResultsCaretaker()
+    private let resultsCaretaker = ResultsCaretaker()
+    private let userQuestionsCaretaker = UserQuestionsCaretaker()
     static let instance = GameSingleton()
     
     var percentage: Int = 0
@@ -21,12 +22,20 @@ class GameSingleton {
     }
     private(set) var results: [GameSession] {
         didSet {
-            caretaker.saveResults(results: results)
+            resultsCaretaker.saveResults(results: results)
+        }
+    }
+    var isDirectQuestionsOrder = true
+    
+    private(set) var userQuestions: [Question] {
+        didSet {
+            userQuestionsCaretaker.saveQuestions(questions: userQuestions)
         }
     }
     
     private init() {
-        results = caretaker.loadResults() ?? []
+        results = resultsCaretaker.loadResults() ?? []
+        userQuestions = userQuestionsCaretaker.loadQuestions() ?? []
     }
     
     func addResult(result: GameSession) {
@@ -37,4 +46,7 @@ class GameSingleton {
         results.removeAll()
     }
     
+    func addQuestion(question: Question) {
+        userQuestions.append(question)
+    }
 }
