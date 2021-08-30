@@ -35,6 +35,9 @@
                                         <state key="normal" title="Results">
                                             <color key="titleColor" systemColor="labelColor"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="9cf-cb-UV2" kind="show" id="iQw-Ap-itU"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -122,12 +125,35 @@
                     </view>
                     <navigationItem key="navigationItem" id="1Hu-iF-TJ0"/>
                     <connections>
+                        <outlet property="firstAnswerOutlet" destination="iE8-aV-1Sh" id="A2R-sf-mn7"/>
+                        <outlet property="fourthAnswerOutlet" destination="6h4-9Y-e2X" id="1VB-6r-hDg"/>
                         <outlet property="questionLabel" destination="xGJ-RQ-6dM" id="D60-W3-dQb"/>
+                        <outlet property="secondAnswerOutlet" destination="jrM-HS-4NJ" id="jya-L2-mdH"/>
+                        <outlet property="thirdAnswerOutlet" destination="9R7-ca-dBb" id="fjX-z9-Dd6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sd9-7m-4sw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="926" y="70"/>
+            <point key="canvasLocation" x="1026" y="-255"/>
+        </scene>
+        <!--Result View Controller-->
+        <scene sceneID="Aox-8F-hoT">
+            <objects>
+                <tableViewController id="9cf-cb-UV2" customClass="ResultViewController" customModule="WWTBAM" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="DcZ-hS-EpS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <connections>
+                            <outlet property="dataSource" destination="9cf-cb-UV2" id="PPg-KK-zRq"/>
+                            <outlet property="delegate" destination="9cf-cb-UV2" id="9RD-jq-KlU"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="pOv-0Y-cbn"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S3w-Ng-izI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1023" y="395"/>
         </scene>
     </scenes>
     <resources>
